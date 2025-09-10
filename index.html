@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Santhosh Kumar S. - Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f7fa;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* Header */
+    header {
+      background-color: #2980b9;
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ecf0f1;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #2980b9, #3da4d9);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .hero .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero-content h1 {
+      margin: 0 0 10px;
+      font-size: 2.5em;
+    }
+    .hero-content p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    /* Sections */
+    section {
+      padding: 60px 0;
+      background-color: #fff;
+      margin-bottom: 20px;
+    }
+    section:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+      font-size: 2em;
+    }
+    .about, .skills, .projects, .experience, .achievements {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .about .content {
+      flex: 1 1 100%;
+    }
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-left: 0;
+    }
+    .skills li {
+      background: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      list-style: none;
+    }
+    .projects .project {
+      flex: 1 0 45%;
+      margin: 20px 2.5%;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .projects img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .experience, .achievements {
+      flex-direction: column;
+    }
+    .experience .job, .achievements li {
+      margin-bottom: 20px;
+    }
+    .experience .job h3 {
+      margin: 0 0 10px;
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact button {
+      background: #2980b9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .contact button:hover {
+      background: #3da4d9;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+      }
+      nav ul {
+        margin-top: 10px;
+      }
+      nav ul li {
+        margin: 0 10px;
+      }
+      .projects {
+        flex-direction: column;
+      }
+      .projects .project {
+        flex: 1 0 100%;
+        margin: 20px 0;
+      }
+    }
+    /* Editable Styles */
+    [contenteditable="true"] {
+      border: 1px dashed #ccc;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    [contenteditable="true"]:focus {
+      outline: none;
+      background-color: #fffbe6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Santhosh Kumar S.</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Motivated college student seeking opportunities in <span id="fieldOfInterest" contenteditable="true">[field of interest]</span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="content">
+        <p contenteditable="true">I am a dedicated college student with a passion for learning and applying skills in [field of interest]. I excel in teamwork, problem-solving, and quick adaptation to new technologies. My goal is to gain real-world experience through internships and contribute meaningfully to impactful projects.</p>
+        <p><strong>Email:</strong> <a href="mailto:santhosh.kumar@email.com">santhosh.kumar@email.com</a><br />
+        <strong>Phone:</strong> +91-XXXXXXXXXX<br />
+        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/santhoshkumar" target="_blank">linkedin.com/in/santhoshkumar</a></p>
+        <p><strong>Education:</strong> Bachelor of <span id="degree" contenteditable="true">[Your Degree]</span> at <span id="collegeName" contenteditable="true">[Your College Name]</span>, currently in <span id="year" contenteditable="true">[1st/2nd/3rd/4th]</span> year, expected graduation <span id="gradYear" contenteditable="true">20XX</span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+        <li>Python Programming</li>
+        <li>C++ Programming</li>
+        <li>Communication</li>
+        <li>Teamwork</li>
+        <li>Problem-Solving</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3 contenteditable="true">Project 1: [Project Title]</h3>
+        <p>Tools Used: <span contenteditable="true">[e.g., Python, Excel]</span></p>
+        <p>Description: <span contenteditable="true">Developed [brief description].</span></p>
+        <p>Outcome: <span contenteditable="true">Achieved [result or impact].</span></p>
+      </div>
+      <div class="project">
+        <h3 contenteditable="true">Project 2: [Project Title]</h3>
+        <p>Tools Used: <span contenteditable="true">[e.g., C++, PowerPoint]</span></p>
+        <p>Description: <span contenteditable="true">Created [brief description].</span></p>
+        <p>Outcome: <span contenteditable="true">Improved [result or impact].</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>Intern / Volunteer</h3>
+        <p><span contenteditable="true">[Organization Name]</span>, <span contenteditable="true">[City, State]</span> | <span contenteditable="true">[Month Year – Month Year]</span></p>
+        <ul>
+          <li contenteditable="true">Assisted with data entry, research, and customer support.</li>
+          <li contenteditable="true">Collaborated with team members to complete tasks efficiently.</li>
+          <li contenteditable="true">Gained practical experience in relevant areas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="achievements">
+    <div class="container">
+      <h2>Achievements</h2>
+      <ul>
+        <li contenteditable="true">Participated in [Event/Competition Name], [Year]</li>
+        <li contenteditable="true">Awarded [Name of Award], [Year]</li>
+        <li contenteditable="true">Recognized for [any other notable achievement]</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p>Languages: English (Fluent), Tamil (Native), Hindi (Basic)</p>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scroll navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Contact form submission (simple JS)
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = form.name.value;
+      const email = form.email.value;
+      const message = form.message.value;
+      alert(`Thank you, ${name}! Your message has been sent:\n\n${message}\n\nFrom: ${email}`);
+      form.reset();
+    });
+
+    // LocalStorage for editable content
+    document.querySelectorAll('[contenteditable="true"]').forEach(el => {
+      const key = 'portfolio_' + (el.id || el.getAttribute('aria-label') || el.parentElement.id || Math.random());
+      if (localStorage.getItem(key)) {
+        el.textContent = localStorage.getItem(key);
+      }
+      el.addEventListener('input', function() {
+        localStorage.setItem(key, el.textContent);
+      });
+    });
+  </script>
+</body>
+</html>
